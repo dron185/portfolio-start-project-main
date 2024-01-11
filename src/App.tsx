@@ -12,7 +12,7 @@ import { Works } from './layout/sections/works/Works';
 function App() {
     return (
         <div className="App">
-            <Header></Header>
+            <Header/>
             <Main/>
             <Skills/>
             <Works/>
