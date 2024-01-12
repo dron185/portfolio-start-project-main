@@ -1,6 +1,5 @@
 import './App.css';
 import { Footer } from './layout/footer/Footer';
-// import styled from 'styled-components';
 import { Header } from "./layout/header/Header";
 import { Contact } from './layout/sections/contacts/Contacts';
 import { Main } from './layout/sections/main/Main';
