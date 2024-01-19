@@ -13,7 +13,7 @@ export const Main = () => {
           <div>
             <SmallText>Hi There</SmallText>
             <Name>
-              I am <span>Andrey Huryn</span>
+              I am <span>Svetlana Dyablo</span>
             </Name>
             <MainTitle>A Web Developer.</MainTitle>
           </div>
