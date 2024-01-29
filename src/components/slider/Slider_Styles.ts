@@ -2,10 +2,12 @@ import styled from "styled-components";
 import {theme} from "../../styles/Theme";
 
 const Slider = styled.div`
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid red;
 `;
 
 const Slide = styled.div`
@@ -36,7 +38,7 @@ const Pagination = styled.div`
       margin-left: 5px;
     }
 
-    &.active {
+    &:active {
       width: 20px;
       background-color: ${theme.colors.accent};
     }
