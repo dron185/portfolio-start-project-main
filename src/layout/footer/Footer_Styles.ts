@@ -19,13 +19,15 @@ const SocialList = styled.ul`
     margin: 30px 0;
 `;
 
-const SocialItem = styled.li``;
+const SocialItem = styled.li`
+    
+`;
 
 const SocialLink = styled.a`
     display: flex;
     justify-content: center;
     align-items: center;
-
+    transition: ${theme.animations.transition};
     width: 35px;
     height: 35px;
     border-radius: 50%;

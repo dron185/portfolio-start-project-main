@@ -26,8 +26,12 @@ export const Link = styled.a<{active?: boolean}>`
         left: 0;
         right: 0;
         z-index: -1;
-        
-        ${props => props.active === true && css<{active?: boolean}>`   // мы сделали условие что если у нас в пропсах придет active и он будет true, 
+        height: 0;
+        transition: ${theme.animations.transition};
+
+        ${props => props.active === true && css<{
+            active?: boolean
+        }>`   // мы сделали условие что если у нас в пропсах придет active и он будет true, 
             height: 10px;
         `}
     }

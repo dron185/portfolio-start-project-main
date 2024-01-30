@@ -8,24 +8,24 @@ const MenuItem = styled.li`
 `;
 
 const Mask = styled.span`
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: inline-block;
-  height: 50%;
-  overflow-y: hidden;
-  /* outline: 1px solid red; */
-  color: ${theme.colors.accent};
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    height: 50%;
+    overflow-y: hidden;
+    /* outline: 1px solid red; */
+    color: ${theme.colors.accent};
+    transition: ${theme.animations.transition};
 
-  & + & {      // Mask который идет за Mask
-    top: 50%;
-    span {
-      display: inline-block;
-      transform: translateY(-50%);
+    & + & { // Mask который идет за Mask
+        top: 50%;
+
+        span {
+            display: inline-block;
+            transform: translateY(-50%);
+        }
     }
-  }
-
-  transition: all 0.5s ease;
 `
 
 const NavLink = styled(Link)`
@@ -48,8 +48,7 @@ const NavLink = styled(Link)`
         z-index: 1;
 
         transform: scale(0);
-
-        transition: all 0.5s ease;
+        transition: ${theme.animations.transition};
     }
 
     &:hover, &.active {
@@ -133,21 +132,28 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     bottom: 0;
     z-index: 99999;
     background-color: rgba(31, 31, 32, 0.9);
-    display: none;
-
-    ${ props => props.isOpen && css`
-            display: flex;
-            justify-content: center;
-            align-items: center;
-    `}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: 0.8s ease-in-out;
 
     ul {
         display: flex;
-        gap: 30px;
+        gap: 10px;
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        transition: 0.8s ease-in-out;
     }
+
+    ${ props => props.isOpen && css`
+        transform: translateY(0);
+        
+        & ul {
+            gap: 40px;
+        }
+    `}
 `;
 
 
